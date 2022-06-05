@@ -33,7 +33,7 @@ func initRouter(database *dbInstance.Database) *gin.Engine {
 }
 
 func Hello(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"hello": "Hello World!"})
+	c.JSON(http.StatusOK, gin.H{"data": "Hello World!"})
 }
 
 func PostPoints(c *gin.Context) {
