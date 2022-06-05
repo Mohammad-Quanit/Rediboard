@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/mquanit/Desktop/Projects/Go Apps/rediboard'
+make: Leaving directory '/home/mquanit/Desktop/Projects/Go Apps/rediboard'
+ 
+make: *** No targets.  Stop.
+
