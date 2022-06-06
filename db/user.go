@@ -12,7 +12,6 @@ type User struct {
 	Rank     int    `json:"rank"`
 }
 
-// Save users to the sorted sets by redis pipelines
 func (db *Database) SaveUser(user *User) error {
 	member := &redis.Z{
 		Score:  float64(user.Points),
@@ -30,7 +29,6 @@ func (db *Database) SaveUser(user *User) error {
 	return nil
 }
 
-// Get user by username using redis pipelines
 func (db *Database) GetUser(username string) (*User, error) {
 	pipe := db.Client.TxPipeline()
 	score := pipe.ZScore(Ctx, leaderboardKey, username)
